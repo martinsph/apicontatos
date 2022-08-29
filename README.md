@@ -1,21 +1,21 @@
-# apicontatos
-
-## Este projeto foi desenvolvido para ser utilizado como uma API de contatos. Através dela pode-se criar, consultar, deletar e atualizar um contato em um banco de dados.
+<h1 align="center">apicontatos</h1>
 
 <p align="center">
- <a href="#objetivo">Objetivo</a> •
- <a href="#roadmap">Roadmap</a> • 
- <a href="#tecnologias">Tecnologias</a> • 
- <a href="#contribuicao">Contribuição</a> • 
- <a href="#licenc-a">Licença</a> • 
+ <a href="#about">Sobre</a> • 
+ <a href="#features">Features</a> • 
+ <a href="#requirements">Pré-requisitos</a> • 
+ <a href="#tecnologias">Tecnologias</a> •
  <a href="#autor">Autor</a>
 </p>
 
+<h2 id="about">
+<h4> Este projeto foi desenvolvido para ser utilizado como uma API de contatos. Através dela pode-se criar, consultar, deletar e atualizar um contato em um banco de dados. </h4>
+
 <h4 align="center"> 
-	🚧  Api de contatos 🚀 Em desenvolvimento...  🚧
+  Status: Em desenvolvimento...
 </h4>
 
-### Features
+<h3 id="features">Features<h3>
 
 - [x] Criar novo contato
 - [x] Listar contatos
@@ -23,10 +23,10 @@
 - [ ] Atualizar contatos
 
 <h1 align="center">
-  <img alt="api contatos" title="#API_Contatos" src="./apicontatos.gif" />
+  <img alt="api contatos" title="#API_Contatos" src="./apicontato.gif" />
 </h1>
 
-### Pré-requisitos
+<h3 id="requirements">Pré-requisitos</h3>
 
 Para rodar a aplicação é necessário ter instalado em sua máquina as seguintes ferramentas:
 
@@ -35,7 +35,7 @@ Para rodar a aplicação é necessário ter instalado em sua máquina as seguint
 - Node.js para o back-end.
 - E o VS Code para rodar o código.
 
-### Rodando o Back-End (server)
+<h4>Rodando o Back-End (server)</h4>
 
 ```bash
 # Clone este repositório
@@ -53,7 +53,7 @@ $ npm start
 # O servidor inciará na porta:3001 - acesse <http://localhost:3001>
 ```
 
-### Rodando o Front-End (Client)
+<h4>Rodando o front-End (client)</h4>
 
 ```bash
 # Clone este repositório
@@ -74,7 +74,7 @@ $ npm start
 # O servidor inciará na porta:3000 - acesse <http://localhost:3000>
 ```
 
-### Tecnologias
+<h3 id="tecnologias">Tecnologias</h3>
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
@@ -82,3 +82,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - Mongodb
 - React
 - Material UI
+
+<h3 id="autor">Pedro Martins<h3>
+Feito por Pedro Martins.
