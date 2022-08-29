@@ -83,5 +83,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - React
 - Material UI
 
-<h3 id="autor">Pedro Martins<h3>
-<p>Feito por Pedro Martins.</p>
+<h5 id="autor">Pedro Martins<h5>
