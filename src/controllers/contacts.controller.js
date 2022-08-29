@@ -1,6 +1,7 @@
 import * as model from "../models/contacts.model";
 import { Router } from "express";
 
+// envia a info necessária para o cadastro (nome, tel, email e whatsapp) pro model
 const create = async (req, res, next) => {
   try {
     const { name, phone, email, whatsapp } = req.body;
@@ -11,6 +12,7 @@ const create = async (req, res, next) => {
   }
 };
 
+// recupera a lista de contatos do model
 const list = async (req, res, next) => {
   try {
     const result = await model.list();
@@ -20,6 +22,7 @@ const list = async (req, res, next) => {
   }
 };
 
+// recebe o id pelp params e envia ao model para deletar contato
 const remove = async (req, res, next) => {
   try {
     const { id } = req.params;
@@ -31,6 +34,7 @@ const remove = async (req, res, next) => {
   }
 };
 
+// envia as infos para o model para atualizar o contato
 const update = async (req, res, next) => {
   try {
     const { id } = req.params;
@@ -44,6 +48,7 @@ const update = async (req, res, next) => {
 
 const contactsRouter = Router({ mergeParams: true });
 
+// define as rotas da API
 contactsRouter.post("/", create);
 contactsRouter.get("/", list);
 contactsRouter.put("/:id", update);

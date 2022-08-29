@@ -12,7 +12,7 @@ export const create = async (entity) => {
   }
 };
 
-// função recebe somente a coleção e gera uma lista.
+// função recebe a coleção e gera um array com a lista.
 export const list = async () => {
   try {
     const connecting = await connection();
@@ -37,6 +37,7 @@ export const remove = async (id) => {
   }
 };
 
+// função recebe a coleção, o id e os dados a serem atualizados.
 export const update = async (entity) => {
   try {
     const { id, name, phone, email, whatsapp } = entity;

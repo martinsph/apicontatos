@@ -11,6 +11,7 @@ const OPTIONS = {
   useUnifiedTopology: true,
 };
 
+// faz a conexão com o Mongodb
 export default async () => {
   try {
     return (await MongoClient.connect(MONGO_DB_URL, OPTIONS)).db(DB_NAME);

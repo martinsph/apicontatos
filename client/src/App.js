@@ -18,6 +18,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 function App() {
   const [list, setList] = useState([]);
 
+  // método GET da API
   const getContacts = async () => {
     try {
       const { data } = await api.get("/contacts");
@@ -27,6 +28,7 @@ function App() {
     }
   };
 
+  // método POST da API
   const createContact = async (data) => {
     try {
       await api.post("/contacts", data);
@@ -36,6 +38,7 @@ function App() {
     }
   };
 
+  // método DELETE da API
   const deleteContact = async (id) => {
     try {
       await api.delete(`/contacts/${id}`);
@@ -45,10 +48,12 @@ function App() {
     }
   };
 
+  // Utiliza o métodos do useForm do react-hook-form e define string vazia como valor padrão.
   const { handleSubmit, reset, control } = useForm({
     defaultValues: { name: "", phone: "", email: "", whatsapp: "" },
   });
 
+  // Após clicar no botão de enviar, cria o contato e reseta os campos para valores default.
   const onSubmit = (data) => {
     createContact(data);
     reset();
@@ -148,26 +153,31 @@ function App() {
           Lista de Contatos
         </Typography>
         <List>
-          {list.map((l) => (
-            <ListItem
-              key={l._id}
-              disableGutters
-              secondaryAction={
-                <IconButton onClick={() => deleteContact(l._id)}>
-                  <DeleteIcon />
-                </IconButton>
-              }
-            >
-              <ListItemText
-                primary={
-                  <Box>
-                    <Typography>{l.name}</Typography>
-                    <Typography>{l.email}</Typography>
-                  </Box>
+          {list.map(
+            (
+              l // percorre a lista de contatos e exibe na tela através de li
+            ) => (
+              <ListItem
+                key={l._id}
+                disableGutters
+                secondaryAction={
+                  // Adiciona o botão de deletar e chama a função delete no onClick
+                  <IconButton onClick={() => deleteContact(l._id)}>
+                    <DeleteIcon />
+                  </IconButton>
                 }
-              />
-            </ListItem>
-          ))}
+              >
+                <ListItemText
+                  primary={
+                    <Box>
+                      <Typography>{l.name}</Typography>
+                      <Typography>{l.email}</Typography>
+                    </Box>
+                  }
+                />
+              </ListItem>
+            )
+          )}
         </List>
       </Box>
     </Container>
