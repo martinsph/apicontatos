@@ -40,10 +40,6 @@ export const remove = async (id) => {
 export const update = async (entity) => {
   try {
     const { id, name, phone, email, whatsapp } = entity;
-    // const newName = name;
-    // const newPhone = phone;
-    // const newEmail = email;
-    // const newWhatsapp = whatsapp;
     const connecting = await connection();
     const result = await connecting.collection("contatos").updateOne(
       { _id: ObjectId(id) },
